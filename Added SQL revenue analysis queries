@@ -1,0 +1,34 @@
+-- Total Revenue
+
+SELECT
+ROUND(SUM(Quantity * UnitPrice), 2) AS total_revenue
+FROM online_retail;
+
+-- Top 10 Products by Revenue
+
+SELECT
+Description,
+ROUND(SUM(Quantity * UnitPrice), 2) AS revenue
+FROM online_retail
+GROUP BY Description
+ORDER BY revenue DESC
+LIMIT 10;
+
+-- Top 10 Customers by Revenue
+
+SELECT
+CustomerID,
+ROUND(SUM(Quantity * UnitPrice), 2) AS revenue
+FROM online_retail
+GROUP BY CustomerID
+ORDER BY revenue DESC
+LIMIT 10;
+
+-- Monthly Revenue Trend
+
+SELECT
+DATE_TRUNC('month', InvoiceDate) AS month,
+ROUND(SUM(Quantity * UnitPrice), 2) AS revenue
+FROM online_retail
+GROUP BY month
+ORDER BY month;
