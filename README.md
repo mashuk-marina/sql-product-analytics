@@ -43,3 +43,23 @@ The project focuses on identifying revenue drivers, customer value, and sales tr
 
 Marina Mashuk  
 Data Analyst
+## Project Structure
+
+```text
+sql-product-analytics/
+├── README.md
+├── data/
+├── charts/
+└── sql/
+    ├── 01_total_revenue.sql
+    ├── 02_top_products.sql
+    ├── 03_top_customers.sql
+    └── 04_monthly_revenue_trend.sql
+```
+
+## Key Findings
+
+- Dataset contains 541,909 transactions.
+- Total revenue: 9,747,747.93
+- Data covers December 2010 to December 2011.
+- November 2011 generated the highest revenue (1,461,756.25).
